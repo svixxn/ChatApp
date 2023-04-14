@@ -10,7 +10,6 @@ const {notFound, errorHandler} = require("./middlewares/errorMiddleware");
 
 const app = express()
 
-app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 app.use(express.json())
 
@@ -23,6 +22,8 @@ connectDB(process.env.MONGO_URL)
 app.use('/api/user', userRoutes)
 app.use('/api/chat', chatRoutes)
 app.use("/api/message", messageRoutes)
+
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 app.use(notFound)
 app.use(errorHandler)
