@@ -3,7 +3,9 @@
 .App {
     min-height: 100vh;
     display: flex;
-    background-image: url("./background.png");
+    background-color: #2e9f93;
+    /*background: rgb(9,161,196);
+    background: linear-gradient(180deg, rgba(9,161,196,1) 0%, rgba(52,42,147,1) 40%, rgba(228,255,0,1) 100%);*/
     background-size: cover;
     background-position: center;
 }
