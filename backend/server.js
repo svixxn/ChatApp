@@ -18,10 +18,6 @@ connectDB(process.env.MONGO_URL)
 
 app.use(express.static(path.join(__dirname, '../frontend/build')));
 
-app.get('/', (req,res)=>{
-    res.send("API is running")
-})
-
 app.use('/api/user', userRoutes)
 app.use('/api/chat', chatRoutes)
 app.use("/api/message", messageRoutes)
