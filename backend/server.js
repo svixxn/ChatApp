@@ -7,7 +7,10 @@ const userRoutes = require("./routes/userRoutes")
 const chatRoutes = require("./routes/chatRoutes")
 const messageRoutes = require("./routes/messageRoutes")
 const {notFound, errorHandler} = require("./middlewares/errorMiddleware");
+
 const app = express()
+
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 app.use(express.json())
 
@@ -16,7 +19,6 @@ dotenv.config({ path: path.resolve(__dirname, '../.env') })
 
 connectDB(process.env.MONGO_URL)
 
-app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 app.use('/api/user', userRoutes)
 app.use('/api/chat', chatRoutes)
