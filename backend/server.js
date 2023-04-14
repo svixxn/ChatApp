@@ -27,6 +27,9 @@ app.use("/api/message", messageRoutes)
 app.use(notFound)
 app.use(errorHandler)
 
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+
 
 
 const server = app.listen(port, () => {
