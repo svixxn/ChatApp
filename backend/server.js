@@ -16,6 +16,8 @@ dotenv.config({ path: path.resolve(__dirname, '../.env') })
 
 connectDB(process.env.MONGO_URL)
 
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
 app.get('/', (req,res)=>{
     res.send("API is running")
 })
@@ -27,7 +29,7 @@ app.use("/api/message", messageRoutes)
 app.use(notFound)
 app.use(errorHandler)
 
-app.use(express.static(path.join(__dirname, '../frontend/build')));
+
 
 
 
