@@ -17,7 +17,7 @@ function ProfileModal({user, children}) {
         <>
             {children ? (<span onClick={onOpen}>{children}</span>) :
                 (
-                    <IconButton display={{base: "flex"}} icon={<ViewIcon/>} onClick={onOpen}>
+                    <IconButton display={{base: "flex"}} bg={"#2e9f93"} icon={<ViewIcon/>} onClick={onOpen}>
 
                     </IconButton>
                 )

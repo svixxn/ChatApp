@@ -115,13 +115,14 @@ function SideDrawer() {
             display={"flex"}
             justifyContent={"space-between"}
             alignItems={"center"}
-            bg={"white"}
             w={"100%"}
             p={"5px 10px 5px 10px"}
             borderWidth={"5px"}
+            borderColor={"#343333"}
+            className={"dark-theme"}
         >
             <Tooltip label={"Search Users to chat"} hasArrow placement={"bottom-end"}>
-                <Button variant={"ghost"} onClick={onOpen}>
+                <Button variant={"ghost"} onClick={onOpen} _hover={{bg:"#2e9f93"}}>
                     <i className="fa-solid fa-magnifying-glass"/>
                     <Text display={{base: "none", md: "flex"}} px={'4'}>
                         Search user
@@ -130,7 +131,7 @@ function SideDrawer() {
             </Tooltip>
 
             <Text fontSize={"2xl"} fontFamily={"Work Sans"}>
-                Talk-A-Tive
+                Chat App
             </Text>
 
             <div>
@@ -160,15 +161,15 @@ function SideDrawer() {
                     </MenuList>
                 </Menu>
                 <Menu>
-                    <MenuButton as={Button} rightIcon={<ChevronDownIcon/>}>
+                    <MenuButton as={Button} rightIcon={<ChevronDownIcon/>} bg={"#2e9f93"}>
                         <Avatar size={"sm"} cursor={'pointer'} name={user.name} src={user.pic}/>
                     </MenuButton>
-                    <MenuList>
+                    <MenuList bg={"#343333"}>
                         <ProfileModal user={user}>
-                        <MenuItem>My Profile</MenuItem>
+                        <MenuItem bg={"#343333"}>My Profile</MenuItem>
                         </ProfileModal>
                         <MenuDivider />
-                        <MenuItem onClick={logoutHandler}>Logout</MenuItem>
+                        <MenuItem bg={"#343333"} onClick={logoutHandler}>Logout</MenuItem>
                     </MenuList>
                 </Menu>
             </div>
@@ -177,11 +178,11 @@ function SideDrawer() {
         <Drawer placement={"left"} onClose={onClose} isOpen={isOpen}>
             <DrawerOverlay>
                 <DrawerContent>
-                    <DrawerHeader borderBottomWidth={"1px"}>Search Users</DrawerHeader>
-                    <DrawerBody>
+                    <DrawerHeader borderBottomWidth={"1px"} className={"dark-theme"}>Search Users</DrawerHeader>
+                    <DrawerBody className={"dark-theme"}>
                         <Box display={"flex"} pb={"pb2"}>
                             <Input placeholder={"Search by name or email"} mr={2} value={search} onChange={(e)=>setSearch(e.target.value)} />
-                            <Button onClick={handleSearch}>Go</Button>
+                            <Button onClick={handleSearch} bg={"#2e9f93"} _hover={{bg:"#2e9f93"}}>Go</Button>
                         </Box>
                         {loading? (
                             <ChatLoading />

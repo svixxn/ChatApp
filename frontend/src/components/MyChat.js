@@ -44,10 +44,10 @@ function MyChat({fetchAgain}) {
         flexDir={"column"}
         p={3}
         alignItems={"center"}
-        bg={"white"}
         w={{base: "100%", md: "31%"}}
         borderRadius={"lg"}
         borderWidth={"1px"}
+        className={"dark-theme"}
     >
         <Box
             pb={3}
@@ -66,6 +66,7 @@ function MyChat({fetchAgain}) {
                     display={"flex"}
                     fontSize={{base: "17px", md: "10px", lg: "17px"}}
                     rightIcon={<AddIcon/>}
+                    bg={"#2e9f93"}
                 >
                     New Group Chat
                 </Button>
@@ -75,11 +76,11 @@ function MyChat({fetchAgain}) {
             display={"flex"}
             flexDir={"column"}
             p={3}
-            bg={"#F8F8F8"}
             w={"100%"}
             h={"100%"}
             borderRadius={"lg"}
             overflowY={"hidden"}
+            className="dark-theme"
         >
             {chats ? (
                 <Stack overflowY={"scroll"}>

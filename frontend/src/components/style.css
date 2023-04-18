@@ -3,3 +3,8 @@
     flex-direction:column;
     overflow-y: scroll;
 }
+
+.dark-theme {
+    background-color: #343333;
+    color:white;
+}

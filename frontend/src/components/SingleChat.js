@@ -196,10 +196,11 @@ const SingleChat = ({fetchAgain, setFetchAgain}) => {
                             flexDir={"column"}
                             justifyContent={"flex-end"}
                             p={3}
-                            bg={"#E8E8E8"}
                             w={"100%"}
                             h={"100%"}
                             borderRadius={"lg"}
+                            borderWidth={"1px"}
+                            borderColor={"#2e9f93"}
                             overflowY={"hidden"}
                         >
                             {loading ? (

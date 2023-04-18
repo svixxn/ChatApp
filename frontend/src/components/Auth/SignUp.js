@@ -126,7 +126,7 @@ function SignUp() {
     }
 
     return (
-        <VStack spacing={"5px"} color={"black"}>
+        <VStack spacing={"5px"}>
             <FormControl id={"first-name"} isRequired>
                 <FormLabel>Name</FormLabel>
                 <Input placeholder={"Enter your name..."} onChange={(e) => setName(e.target.value)}/>
@@ -143,7 +143,7 @@ function SignUp() {
                     <Input type={show ? "text" : "password"} placeholder={"Enter your password..."}
                            onChange={(e) => setPassword(e.target.value)}/>
                     <InputRightElement width={"4.5rem"}>
-                        <Button h={"1.75rem"} size={"sm"} onClick={handleClick}>
+                        <Button h={"1.75rem"} size={"sm"} onClick={handleClick} bg={"#2e9f93"}>
                             {show ? "Hide" : "Show"}
                         </Button>
                     </InputRightElement>
@@ -156,7 +156,7 @@ function SignUp() {
                     <Input type={show ? "text" : "password"} placeholder={"Confirm your password..."}
                            onChange={(e) => setConfirmPassword(e.target.value)}/>
                     <InputRightElement width={"4.5rem"}>
-                        <Button h={"1.75rem"} size={"sm"} onClick={handleClick}>
+                        <Button h={"1.75rem"} size={"sm"} onClick={handleClick} bg={"#2e9f93"}>
                             {show ? "Hide" : "Show"}
                         </Button>
                     </InputRightElement>
