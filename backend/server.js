@@ -11,7 +11,6 @@ const {notFound, errorHandler} = require("./middlewares/errorMiddleware");
 const app = express()
 
 app.use(express.json())
-
 const port = process.env.PORT || 5000
 dotenv.config({ path: path.resolve(__dirname, '../.env') })
 
